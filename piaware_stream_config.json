@@ -1,0 +1,20 @@
+{
+    "aws_vars": {
+        "awsendpoint": "[AWS-IOT-ENDPOINT-DESIGNATOR-STR].iot.[AWS-REGION].amazonaws.com",
+        "awsendpoint_port": 8883,
+        "clientId": "[DEVICE-CLIENT-ID]",
+        "caPath": "PATH/TO/root-CA.crt",
+        "keyPath": "PATH/TO/private.pem.key",
+        "certPath": "PATH/TO/certificate.pem.crt",
+        "topics": [
+            "piaware",
+            "<clientId>"
+        ]
+    },
+    "piaware_script": {
+        "deliveryMethod": 2,
+        "dump1090dataUrl": "http://127.0.0.1/dump1090-fa/data/aircraft.json",
+        "piawarePostUrl": "[URL-TO-POST-DATA]",
+        "pollDelay": 2
+    }
+}

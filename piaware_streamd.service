@@ -1,0 +1,14 @@
+[Unit]
+Description=piaware_streamd restart script
+Wants=network-online.target
+After=network-online.target piaware.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/python /opt/piaware_stream.py
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=streamd
